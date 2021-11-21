@@ -27,7 +27,7 @@ func TestCI(t *testing.T) {
 		tc := tc
 		t.Run(tc.input, func(t *testing.T) {
 			err := fmt.Errorf("test")
-			require.Error(t, err)
+			require.NoError(t, err)
 		})
 	}
 }
