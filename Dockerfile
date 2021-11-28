@@ -1,11 +1,11 @@
-FROM golang:1.16
+FROM golang:1.16-buster as otus
 
 WORKDIR /app
+RUN GOOS=linux CGO_ENABLED=0
 
-COPY ./ /app
-
+COPY . .
 RUN go mod download
 
-RUN go get github.com/santonov10/otus_hw_project
+RUN go build ./cmd/*
 
-ENTRYPOINT CompileDaemon --build="go build -o main" --command=./main
+ENTRYPOINT ["/app/imagepreview"]
