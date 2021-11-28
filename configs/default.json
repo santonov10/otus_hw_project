@@ -1,0 +1,9 @@
+{
+  "http": {
+    "port": "8080"
+  },
+  "cacheImagesLru": {
+    "capacity" : 10,
+    "dir" : "./imgCache"
+  }
+}
