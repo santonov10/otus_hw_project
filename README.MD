@@ -6,7 +6,7 @@ https://github.com/OtusGolang/final_project/blob/master/03-image-previewer.md - 
 - make run
 
 тесты:
-- make test
+- make tests
 
 конфиг в папке /configs/default.json:
 - "http": 
